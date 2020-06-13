@@ -17,7 +17,8 @@ class App extends Component{
       },
       sys:{
         country: "IN"
-      }
+      },
+      weather: [{description: "", icon: "50n"}]
     }
   }
   
@@ -45,14 +46,44 @@ class App extends Component{
     return(
       <div className="firstPage container-fluid" style={{background:"#0a1f44", paddingTop: "50px"}} >
       {/* <form> */}
-        <h1 style={{ color: "white", lineHeight: "1.5", fontSize: "50px" }} >Simple Weather App</h1>
-          <input type="text" onChange={(event) => this.changed(event)} />
+        <h1 >Simple Weather App</h1>
+        <div className="my-form">
+        <input type="text" onChange={(event) => this.changed(event)} placeholder="Search for a City"/>
         <button type = "submit" className="btn btn-danger submitButton btn-lg" onClick={this.getWeather}>Submit</button>
+        </div>
         {/* </form> */}
+
+
         <Cards
             City = {this.state.wdata.name}
             Temp = {this.state.wdata.main.temp}
             country = {this.state.wdata.sys.country}
+            description = {this.state.wdata.weather[0].description}
+          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
+        />
+
+        <Cards
+          City={this.state.wdata.name}
+          Temp={this.state.wdata.main.temp}
+          country={this.state.wdata.sys.country}
+          description={this.state.wdata.weather[0].description}
+          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
+        />
+
+        <Cards
+          City={this.state.wdata.name}
+          Temp={this.state.wdata.main.temp}
+          country={this.state.wdata.sys.country}
+          description={this.state.wdata.weather[0].description}
+          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
+        />
+
+        <Cards
+          City={this.state.wdata.name}
+          Temp={this.state.wdata.main.temp}
+          country={this.state.wdata.sys.country}
+          description={this.state.wdata.weather[0].description}
+          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
         />
         
       </div>
