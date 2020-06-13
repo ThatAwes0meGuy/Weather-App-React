@@ -1,26 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Cards from './Components/Cards'
+class App extends Component{
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return(
+      <div className="firstPage container-fluid" style={{background:"#0a1f44", paddingTop: "50px"}} >
+      <form>
+          <h1 style={{ color: "white", lineHeight:"1.5", fontSize: "50px" }} >Simple Weather App</h1>
+       <input type="text"/>
+        <button type = "submit" className="btn btn-danger submitButton btn-lg">Submit</button>
+        </form>
+
+        <Cards />
+      </div>
+    );
+  }
 }
 
 export default App;
