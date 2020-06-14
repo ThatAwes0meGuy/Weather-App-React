@@ -16,7 +16,7 @@ class App extends Component{
         temp: 0
       },
       sys:{
-        country: "IN"
+        country: ""
       },
       weather: [{description: "", icon: "50n"}]
     }
@@ -53,7 +53,7 @@ class App extends Component{
         </div>
         {/* </form> */}
 
-
+        
         <Cards
             City = {this.state.wdata.name}
             Temp = {this.state.wdata.main.temp}
@@ -62,30 +62,7 @@ class App extends Component{
           icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
         />
 
-        <Cards
-          City={this.state.wdata.name}
-          Temp={this.state.wdata.main.temp}
-          country={this.state.wdata.sys.country}
-          description={this.state.wdata.weather[0].description}
-          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
-        />
-
-        <Cards
-          City={this.state.wdata.name}
-          Temp={this.state.wdata.main.temp}
-          country={this.state.wdata.sys.country}
-          description={this.state.wdata.weather[0].description}
-          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
-        />
-
-        <Cards
-          City={this.state.wdata.name}
-          Temp={this.state.wdata.main.temp}
-          country={this.state.wdata.sys.country}
-          description={this.state.wdata.weather[0].description}
-          icon={"http://openweathermap.org/img/wn/" + this.state.wdata.weather[0].icon + "@2x.png"}
-        />
-        
+        <h5 className="Footer"><i class="fab fa-react"></i>  App By Ashish</h5>
       </div>
     );
   }

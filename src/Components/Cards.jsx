@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 const Cards = (props) =>{
 	return(
-		<div style={{ float: "left" }}>
+		<div>
 			<div className="card" style={{ width: "18rem" }}>
 				{/* <img src="..." class="card-img-top" alt="..." /> */}
 				<div className="container">						
@@ -18,13 +18,9 @@ const Cards = (props) =>{
 								<sup>°C</sup>
 							</div>
 							<figure>
-								<img src={props.icon}/>
+						<img src={props.icon} alt={"http://openweathermap.org/img/wn/50n@2x.png"}/>
 								<figcaption>{props.description.toUpperCase()}</figcaption>
 							</figure>
-						
-					
-					{/* <h5 className="card-title"></h5> */}
-					{/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
 				</div>
 			</div>
 		</div>
